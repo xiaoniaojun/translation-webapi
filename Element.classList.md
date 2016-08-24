@@ -7,29 +7,29 @@
 ## 语法
 
 ```
-`var elementClasses = elementNodeReference.classList;
+var elementClasses = elementNodeReference.classList;
 ```
-`*elementClasses*是一个DOMTokenList，表示*elementNodeReference*的类属性。如果类属性还没有被设置，或者为空，则*elementClasses.length*返回0。*element.classList*本身是只读的，然而你还是可以通过*add()*或*remove()*方法来修改它。
+*elementClasses*是一个DOMTokenList，表示*elementNodeReference*的类属性。如果类属性还没有被设置，或者为空，则*elementClasses.length*返回0。*element.classList*本身是只读的，然而你还是可以通过*add()*或*remove()*方法来修改它。
 ## 方法
-add(String[,String]())
+`add(String[,String]())`
 添加一个指定的类。如果这些类已经存在于element中，那么它们就会被忽略。
 
-remove(String[,String]())
+`remove(String[,String]())`
 移除指定的类。
 
-item(Number)
+`item(Number)`
 通过索引值从集合中检出一个类。
 
-toggle(String[,force]())
+`toggle(String[,force]())`
 当只有一个参数时：切换这个类；举个栗子，如果类存在则移除它并且返回false，反之，添加它并返回true。
 如果有两个参数时：如果第二个参数为true，则添加指定的类，否则移除。
 
-contains(String)
+`contains(String)`
 检查指定类是否存在于元素的类属性当中。
 
 # 栗子
 ```
-`// div是一个\<div\>元素的引用，并且带有class="foo bar"
+// div是一个\<div\>元素的引用，并且带有class="foo bar"
 div.classList.remove("foo");
 div.classList.remove("anotherclass");
 
@@ -42,5 +42,5 @@ div.classList.toggle("visible",i \< 0);
 alert(div.classList.contains("foo"));
 
 div classList.add("foo","bar"); //一次添加多个类
-````
+```
 
